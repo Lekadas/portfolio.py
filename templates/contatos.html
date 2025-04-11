@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página de contatos do portfólio de Fábio de Marco Corso">
     <title>Contatos - Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             background-color: #8d979b;
@@ -22,15 +23,10 @@
             text-align: center;
             color: #ffffff;
             background-color: #4a5a60;
-            /* Fundo da caixa */
             padding: 20px;
-            /* Espaçamento interno */
             border: 2px solid #ffffff;
-            /* Borda branca */
             border-radius: 10px;
-            /* Bordas arredondadas */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Sombra para destaque */
         }
 
         a {
@@ -42,29 +38,65 @@
             text-decoration: underline;
         }
 
-        .button-link {
+        .whatsapp-button,
+        .linkedin-button,
+        .pdf-button {
             display: inline-block;
-            background-color: #072e83;
-            /* Cor de fundo do botão */
             color: #ffffff;
-            /* Cor do texto */
             text-decoration: none;
             font-weight: bold;
             padding: 10px 20px;
-            /* Espaçamento interno */
             border-radius: 5px;
-            /* Bordas arredondadas */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            /* Sombra do botão */
             transition: background-color 0.3s ease, transform 0.2s ease;
-            /* Transições suaves */
         }
 
-        .button-link:hover {
-            background-color: #0556a3;
-            /* Cor de fundo ao passar o mouse */
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
             transform: scale(1.05);
-            /* Leve aumento ao passar o mouse */
+        }
+
+        .linkedin-button {
+            background-color: #0077b5;
+        }
+
+        .linkedin-button:hover {
+            background-color: #005582;
+            transform: scale(1.05);
+        }
+
+        .pdf-button {
+            background-color: #e74c3c;
+        }
+
+        .pdf-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        .whatsapp-button i,
+        .linkedin-button i,
+        .pdf-button i {
+            margin-right: 8px;
+        }
+
+        .email-button {
+            display: inline-block;
+            background-color: #f39c12; /* Cor do botão */
+            color: #ffffff; /* Cor do texto */
+            font-weight: bold;
+            padding: 10px 20px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+            text-decoration: none;
+        }
+
+        .email-button i {
+            margin-right: 8px; /* Espaço entre o ícone e o texto */
         }
     </style>
 </head>
@@ -72,13 +104,25 @@
 <body>
     <div>
         <h1>Contatos</h1>
-        <p><strong>Número:</strong> (11) 98486-3882</p>
-        <p><strong>E-mail:</strong> fabiomcorso@yahoo.com.br</p>
-        <p><strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/fabiomcorso/" target="_blank" class="button-link">Acessar LinkedIn</a>
+        <p>
+            <a href="https://wa.me/5511984863882" target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Entrar em Contato
+            </a>
         </p>
         <p>
-            <a href="/static/CV Fabio 0924.pdf" target="_blank" class="button-link">Baixar Currículo (PDF)</a>
+            <span class="email-button">
+                <i class="fab fa-google"></i> fabiomcorso@yahoo.com.br
+            </span>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/fabiomcorso/" target="_blank" class="linkedin-button">
+                <i class="fab fa-linkedin"></i> Acessar LinkedIn
+            </a>
+        </p>
+        <p>
+            <a href="/static/CV Fabio 0924.pdf" target="_blank" class="pdf-button">
+                <i class="fas fa-file-pdf"></i> Baixar Currículo (PDF)
+            </a>
         </p>
     </div>
 </body>
